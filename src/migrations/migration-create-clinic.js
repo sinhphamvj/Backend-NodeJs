@@ -9,10 +9,12 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
+            name: {
+                type: Sequelize.STRING
+            },
             address: {
                 type: Sequelize.STRING
             },
-
             description: {
                 type: Sequelize.TEXT
             },
