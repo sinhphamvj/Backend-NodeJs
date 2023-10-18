@@ -97,11 +97,19 @@ let deleteUserById = (userId) => {
         try {
             let user = await db.User.findOne({
                 where: { id: userId }
+
             })
             if (user) {
-                await user.destroy()
+                console.log(user)
+                await db.User.destroy({
+                    where: {
+                        id: userId
+                    }
+                })
+
             }
             resolve()
+
         } catch (e) {
             reject(e)
         }
